@@ -31,8 +31,8 @@ public class SampleController {
         String valid = "";
         String ret = "";
         String output = "";
-        try {
-            URL url = new URL("http://lgvn14123:9870/data/temperaturelist/date?date=" + strDate);
+        try {            
+            URL url = new URL(Server.config.getDataUri()+ "/data/temperaturelist/date?date=" + strDate);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
             conn.setRequestProperty("Accept", "application/json");
@@ -72,7 +72,7 @@ public class SampleController {
         String ret = "";
         String output = "";
         try {
-            URL url = new URL("http://lgvn14123:9870/data/temperaturelist/date?date=" + strDate);
+            URL url = new URL(Server.config.getDataUri() + "/data/temperaturelist/date?date=" + strDate);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
             conn.setRequestProperty("Accept", "application/json");
@@ -113,7 +113,7 @@ public class SampleController {
         String ret = "";
         String output = "";
         try {
-            URL url = new URL("http://lgvn14123:9870/data/temperaturelist/date?date=" + strDate);
+            URL url = new URL(Server.config.getDataUri() + "/data/temperaturelist/date?date=" + strDate);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
             conn.setRequestProperty("Accept", "application/json");

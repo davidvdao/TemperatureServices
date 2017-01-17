@@ -9,7 +9,7 @@ public class Server
 	private static final String SERVICE_NAME = "TempeAnalyze";
 
 	private RestExpress server;
-	private Configuration config;
+	static Configuration config;
 	private boolean isStarted = false;
 
 	public Server(Configuration config)
